@@ -1,0 +1,120 @@
+/* Hero Section */
+.about-hero {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.mission-vision h2 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.mission-vision p {
+    color: #555;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-cards .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-cards .card h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.feature-cards .card p {
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta a {
+    padding: 12px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #1e7e34;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
