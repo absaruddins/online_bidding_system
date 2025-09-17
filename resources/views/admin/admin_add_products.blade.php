@@ -3,9 +3,13 @@
 @section('content')
 <h2>Products</h2>
 <div class="card mb-4">
+    @if(session('status'))
+    <h6 class="Alert alert-success">{{session('status')}}</h6>
+    @endif
     <div class="card-header">Add Product</div>
+
     <div class="card-body">
-        <form action="{{ route('admin.products.store') }}" method="POST">
+        <form action="{{ route('admin.store_product') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label>Image</label>
@@ -18,7 +22,7 @@
 
             <div class="mb-3">
                 <label>Starting_Price</label>
-                <input type="number" name="starting_price" class="form-control" required>
+                <input type="number" name="price" class="form-control" required>
             </div>
 
             <div class="mb-3">
