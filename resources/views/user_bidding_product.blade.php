@@ -5,70 +5,26 @@
     <div class="bidding-page">
 
         <!-- Left Side: Product Grid -->
+
+        <!-- Left Side: Product Grid -->
         <div class="product-grid">
+            @foreach($products as $product)
             <div class="product-card">
-                <img class="product-img" src="{{ asset('car1.jpg') }}" alt="Product 1">
-                <h2 class="product-name">Car 1</h2>
-                <h2 class="product-price">Starting Price 600$</h2>
-                <button class="bid-btn" data-id="1">Bid Now</button>
+                <img class="product-img" src="{{ asset('uploads/products/' . $product->image) }}" alt="{{ $product->name }}">
+                <h2 class="product-name">{{ $product->name }}</h2>
+                <h2 class="product-price">Starting Price {{ $product->price }}$</h2>
+                <p class="product-description">{{ $product->description }}</p>
+                <button class="bid-btn" data-id="{{ $product->id }}">Bid Now</button>
             </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('car2.jpg') }}" alt="Product 2">
-                <h2 class="product-name">Car 2</h2>
-                <h2 class="product-price">Starting Price 600$</h2>
-                <button class="bid-btn" data-id="2">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('car3.jpg') }}" alt="Product 3">
-                <h2 class="product-name">Car 3</h2>
-                <h2 class="product-price">Starting Price 600$</h2>
-                <button class="bid-btn" data-id="3">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('watch1.jpg') }}" alt="Product 4">
-                <h2 class="product-name">Watch 1</h2>
-                <h2 class="product-price">Starting Price 500$</h2>
-                <button class="bid-btn" data-id="4">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('watch2.jpg') }}" alt="Product 5">
-                <h2 class="product-name">Watch 2</h2>
-                <h2 class="product-price">Starting Price 500$</h2>
-                <button class="bid-btn" data-id="5">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('watch3.jpg') }}" alt="Product 6">
-                <h2 class="product-name">Watch 3</h2>
-                <h2 class="product-price">Starting Price 500$</h2>
-                <button class="bid-btn" data-id="6">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('home1.jpg') }}" alt="Product 7">
-                <h2 class="product-name">Home 1</h2>
-                <h2 class="product-price">Starting Price 400$</h2>
-                <button class="bid-btn" data-id="7">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('home2.jpg') }}" alt="Product 8">
-                <h2 class="product-name">Home 2</h2>
-                <h2 class="product-price">Starting Price 400$</h2>
-                <button class="bid-btn" data-id="8">Bid Now</button>
-            </div>
-
-            <div class="product-card">
-                <img class="product-img" src="{{ asset('home3.jpg') }}" alt="Product 9">
-                <h2 class="product-name">Home 3</h2>
-                <h2 class="product-price">Starting Price 400$</h2>
-                <button class="bid-btn" data-id="9">Bid Now</button>
+            @endforeach
+            <!-- Pagination -->
+            <div class="pagination-links" style="text-align:center; margin-top:20px;">
+                {{ $products->links() }}
             </div>
         </div>
+
+
+
 
         <!-- Right Side: Bidding Panel -->
         <div class="bidding-panel">

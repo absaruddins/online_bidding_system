@@ -54,4 +54,10 @@ class ProductController extends Controller
         return redirect()->back()->with('status', 'Product Added Successfully');
     }
 
+    public function userProducts()
+    {
+
+        $products = Product::paginate(9);
+        return view('user_bidding_product', compact('products'));
+    }
 }
