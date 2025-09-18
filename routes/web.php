@@ -1,7 +1,8 @@
 
 <?php
-
+    use App\Http\Controllers\BidController;
     use App\Http\Controllers\ProductController;
+    use App\Http\Controllers\WinnerController;
     //use App\Http\Controllers\Admin\ProductController as AdminProductController;
     use Illuminate\Support\Facades\Route;
 
@@ -80,5 +81,19 @@
     // Admin Dashboard
     Route::get('/admin/dashboard', [ProductController::class, 'index'])->name('admin.admin_dashboard');
 
-Route::get('/admin-product', [ProductController::class, 'create'])->name('admin.admin_add_products');
-Route::post('/admin-add-products', [ProductController::class, 'store'])->name('admin.store_product');
+    Route::get('/admin-product', [ProductController::class, 'create'])->name('admin.admin_add_products');
+    Route::post('/admin-add-products', [ProductController::class, 'store'])->name('admin.store_product');
+    //live biddig
+    Route::post('/bids', [BidController::class, 'store'])->name('bids.store');
+    Route::get('/winner/{id}', [BidController::class, 'winner'])->name('bids.winner');
+
+    Route::get('/payment/{productId}', function ($productId) {
+        return redirect('https://www.bkash.com/');
+    });
+
+    Route::post('/winners', [WinnerController::class, 'store'])->name('winners.store'); // AJAX save
+    Route::get('/admin/winners', [WinnerController::class, 'index'])->name('admin.admin_winners');
+    // list view
+    Route::post('/admin/winners/{id}/paid', [WinnerController::class, 'markPaid'])->name('winners.paid');
+    Route::post('/declare-winner/{productId}', [WinnerController::class, 'declareAndSave']);
+Route::get('/search', [ProductController::class, 'search'])->name('search');

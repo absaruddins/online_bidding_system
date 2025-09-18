@@ -48,10 +48,11 @@
     <div class="sidebar">
         <h4>Admin Panel</h4>
         <a href="{{ route('admin.admin_dashboard') }}">Dashboard</a>
-      <a href="{{ route('admin.admin_add_products') }}">Add Product</a> 
-{{-- 
+        <a href="{{ route('admin.admin_add_products') }}">Add Product</a>
+        <a href="{{ route('admin.admin_winners') }}">Winners list</a>
+        {{--
         <a href="{{ route('admin.products') }}">Products</a>
-        <a href="{{ route('admin.winners') }}">Winners</a>
+
         <a href="{{ route('admin.all_data') }}">All Data</a> --}}
 
     </div>

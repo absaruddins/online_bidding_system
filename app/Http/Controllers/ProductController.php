@@ -60,4 +60,13 @@ class ProductController extends Controller
         $products = Product::paginate(9);
         return view('user_bidding_product', compact('products'));
     }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $products = Product::where('name', 'LIKE', "%{$query}%")
+            ->paginate(9);
+
+        return view('user_bidding_product', compact('products', 'query'));
+    }
 }

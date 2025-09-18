@@ -34,10 +34,15 @@
 
                 </ul>
             </div>
-            <div class="search">
+            {{-- <div class="search">
                 <input class="srch" type="search" name="" placeholder="Type to text">
                 <a href="#"><button class="btn">Search</button></a>
-            </div>
+            </div> --}}
+            <form action="{{ route('search') }}" method="GET" style="display:flex;">
+                <input type="text" name="query" placeholder="Search by product name" required>
+                <button type="submit">Search</button>
+            </form>
+
 
         </div>
         @yield('content')
@@ -107,7 +112,9 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+    {{-- Custom page scripts --}}
+    @stack('scripts')
 </body>
 
 </html>
