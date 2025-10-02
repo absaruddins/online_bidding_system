@@ -38,11 +38,29 @@
                 <input class="srch" type="search" name="" placeholder="Type to text">
                 <a href="#"><button class="btn">Search</button></a>
             </div> --}}
-            <form action="{{ route('search') }}" method="GET" style="display:flex;">
-                <input type="text" name="query" placeholder="Search by product name" required>
-                <button type="submit">Search</button>
-            </form>
+            <div class="news">
 
+                <form action="{{ route('search') }}" method="GET" style="display: flex; align-items: center; border-radius: 5px; ">
+                    <input id="src" type="text" name="query" placeholder="Search by product name" required>
+                    <button id="sch" type="submit">Search</button>
+                </form>
+
+            </div>
+            <div class="logout">
+
+                @auth
+
+                <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+                    @csrf
+                    <button id="lg" type="submit">Logout</button>
+                </form>
+
+                @endauth
+                @guest
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('register') }}">Register</a></li>
+                @endguest
+            </div>
 
         </div>
         @yield('content')

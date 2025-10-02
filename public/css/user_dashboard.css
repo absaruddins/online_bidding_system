@@ -97,8 +97,12 @@ ul li a:hover {
 .search {
     width: 330px;
     float: right;
-
+    border-radius: 10px;
+    display: flex;
+    display: flex;
 }
+
+
 
 .srch {
     font-family: 'Times New Roman';
@@ -374,4 +378,53 @@ ul li a:hover {
 
 .bid-history h3 {
     color: brown;
+}
+
+
+
+
+
+.logout,
+#lg {
+    margin-right: 50px;
+    gap: 10px;
+    font-weight: bold;
+    color: brown;
+    border: none;
+    font-size: 18px;
+    background-color: aliceblue;
+    border-width: 10px;
+
+
+}
+
+.news,
+#src {
+    border-radius: 1px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: brown;
+
+
+
+}
+
+.news,
+#sch {
+    border-radius: 1px;
+    text-align: center;
+    font-size: 14px;
+    color: brown;
+    font-weight: bold;
+
+}
+
+.news {
+    background-color: brown;
+}
+
+.news,
+#for {
+    border-radius: 2px;
 }

@@ -22,7 +22,7 @@
 #bidForm .input-row {
     display: flex;
     gap: 10px;
-    /* দুই input এর মধ্যে ফাঁকা */
+   
     margin-bottom: 10px;
 }
 
