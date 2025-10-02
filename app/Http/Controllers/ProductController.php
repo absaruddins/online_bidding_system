@@ -114,9 +114,9 @@ class ProductController extends Controller
 
         return redirect()->route('admin.products.list')->with('status', 'Product Deleted Successfully');
     }
-// ... Existing product functions ...
 
-    // 🔹 Show registered users list in admin panel
+
+    // Show registered users list in admin panel
     public function registerList()
     {
         // Check if admin

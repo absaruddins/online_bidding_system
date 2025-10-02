@@ -133,7 +133,7 @@
                     , body: formData
                 })
                 .then(res => res.json())
-                .then(data => { // এখানে নাম data রাখতে হবে
+                .then(data => { 
                     console.log("Server Response:", data);
 
                     let list = document.getElementById('bidList');

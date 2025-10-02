@@ -76,10 +76,11 @@
     <nav class="admin-navbar">
         <div class="news">
 
-            <form action="{{ route('search') }}" method="GET" style="display: flex; align-items: center; border-radius: 5px; ">
-                <input id="src" type="text" name="query" placeholder="Search by product name" required>
+            <form action="{{ route('admin.search') }}" method="GET" style="display: flex; align-items: center; border-radius: 5px;">
+                <input id="src" type="text" name="query" placeholder="Search by User ID, Email, Name or Product Name" required>
                 <button id="sch" type="submit">Search</button>
             </form>
+
 
         </div>
         <div class="logout">

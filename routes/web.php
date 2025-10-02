@@ -64,7 +64,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/products/{id}/update', [ProductController::class, 'update'])->name('admin.products.update');
     Route::delete('/admin/products/{id}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
     Route::get('admin/registerlist', [ProductController::class, 'registerList'])
-    ->name('admin.registerlist');
+        ->name('admin.registerlist');
+    Route::get('/admin/search', [App\Http\Controllers\Admin\ProductController::class, 'adminsearch'])->name('admin.search');
 
 });
 
