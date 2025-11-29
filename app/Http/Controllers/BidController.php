@@ -9,6 +9,12 @@ class BidController extends Controller // phpcs:ignore PEAR.Commenting.ClassComm
     // Save bid;
     public function store(Request $request)
     {
+         //  Validation  add 
+        $request->validate([
+            'product_id' => 'required|numeric',
+            'gmail'      => 'required|email',
+            'price'      => 'required|numeric|min:1',  //  zero/negative reject
+        ]);
         $bid = Bid::create([
             'product_id' => $request->product_id,
             'gmail'      => $request->gmail,

@@ -13,4 +13,12 @@ class Bid extends Model
     {
         return $this->belongsTo(Product::class);
     }
+    
+    //  Winner Logic (Highest Bid)
+    public static function findWinner($productId)
+    {
+        return self::where('product_id', $productId)
+            ->orderBy('price', 'DESC')
+            ->first();
+    }
 }

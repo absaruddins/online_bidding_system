@@ -90,10 +90,10 @@
             btn.addEventListener('click', function() {
                 let productId = this.dataset.id;
 
-                // hidden input এ product_id সেট
+                // hidden input  product_id 
                 document.getElementById('product_id').value = productId;
 
-                // আগের bid history, winner reset
+                //  bid history, winner reset
                 document.getElementById('bidList').innerHTML = "";
                 document.getElementById('winner').innerText = "No Winner Yet";
                 document.getElementById('payBtn').style.display = "none";
@@ -169,7 +169,7 @@
                             `${winner.gmail} won with $${winner.price}`;
                         document.getElementById('payBtn').style.display = 'block';
 
-                        // Winner DB তে save
+                        // Winner DB  save
                         fetch("{{ route('winners.store') }}", {
                                 method: "POST"
                                 , headers: {

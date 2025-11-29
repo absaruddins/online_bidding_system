@@ -84,10 +84,10 @@
 
                 <div class="follow_us">
                     <h4>Follow Us</h4>
-                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
                 </div>
 
 
